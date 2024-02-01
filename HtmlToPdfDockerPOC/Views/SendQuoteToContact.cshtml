@@ -1,0 +1,368 @@
+﻿@model HtmlToPdfDockerPOC.Quote;
+<style>
+    .none-margin-bottom {
+        margin-bottom: 0;
+    }
+
+    .none-margin-top {
+        margin-top: 0;
+    }
+
+    .row {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .align-left {
+        flex: auto;
+        text-align: left;
+    }
+
+    .align-middle {
+        flex: auto;
+        text-align: center;
+    }
+
+    .align-right {
+        flex: auto;
+        text-align: right;
+    }
+
+    .h3 {
+        font-size: 18.72px;
+    }
+
+    .bold {
+        font-weight: bold;
+    }
+
+    .row-space-around {
+        display: flex;
+        justify-content: space-around;
+    }
+
+    .flex {
+        display: flex;
+    }
+
+    .table {
+        width: 100%;
+        font-size: 15px;
+    }
+
+    .table-border {
+        border: 2px solid #3b5c9d;
+        border-collapse: collapse;
+    }
+
+    .thead {
+        background-color: #1f77b7;
+        color: #fff;
+        text-align: center;
+        font-size: 19px;
+    }
+
+    .td {
+        border: 2px solid #3b5c9d;
+        font-size: 17px;
+    }
+
+    .text-center {
+        text-align: center;
+    }
+
+    .expired {
+        color: red;
+    }
+
+    .h4 {
+        font-size: 16px;
+    }
+
+    .total {
+        color: #fff;
+        background-color: #366092;
+    }
+
+    .quote-details {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+    }
+
+    .line {
+        margin-bottom: 0px;
+        color: #3b5c9d;
+    }
+
+    .item-under-line {
+        text-align: center;
+        margin-top: 0px;
+    }
+
+    .approval-signature {
+        display: flex;
+    }
+
+    .approval-signature-item1 {
+        flex: 1;
+        text-align: right;
+    }
+
+    .approval-signature-item2 {
+        flex: 2;
+    }
+
+    .approval {
+        display: flex;
+        justify-content: space-around;
+    }
+
+    .printed {
+        display: flex;
+    }
+
+    .printed-item1 {
+        flex: 1;
+    }
+
+    .printed-item2 {
+        flex: 2
+    }
+
+    .h2 {
+        font-size: 24px;
+    }
+
+    .h5 {
+        font-size: 13.28px;
+    }
+
+    .h6 {
+        font-size: 10.72px;
+    }
+
+    .dark-blue {
+        color: #366092
+    }
+
+    .table-striped tbody tr:nth-child(even) {
+        background-color: rgb(239, 240, 240);
+    }
+</style>
+
+<div>
+    <div class="row">
+        <div class="align-left h5 dark-blue">The Steel Network,Inc</div>
+        <div class="align-middle h5 dark-blue bold">CONFIDENTIAL</div>
+        <div class="align-right h5 dark-blue">Quote&nbsp;@Model.SerialNumber</div>
+    </div>
+    <div class="row" style="margin-top:5px;">
+        <div class="align-left">
+            <div class="none-margin-top dark-blue bold h3">Quote#: @Model.SerialNumber</div>
+            <div class="bold none-margin-top h5">Issued: 23/2/2024</div>
+            <div class="bold none-margin-top h5 expired">Expires: <u>25/6/2026</u></div>
+        </div>
+        <div style="flex:auto">
+            <div class="row">
+                <div class="align-left">
+                    <div class="dark-blue bold h3 text-center"><strong>The Steel Network, Inc.</strong></div>
+                    <div style="margin-top:0px" class="none-margin-top h5 text-center">2012-A TW Alexander Drive</div>
+                    <div style="margin-top:0px" class="none-margin-top h5 text-center">PO Box 13887</div>
+                    <div style="margin-top:0px" class="none-margin-top h5 text-center">Durham,  27709</div>
+                </div>
+                <div align-right>
+                    <img style="max-height:75px;" src="https://steelnetwork.com/wp-content/uploads/2020/08/the-steel-network-logo.png" />
+                </div>
+            </div>
+        </div>
+    </div>
+    <br />
+    <div class="row-space-around">
+        <div>
+            <div class="flex">
+                <div style="flex:auto">
+                    <span class="bold h3">To:</span>
+                </div>
+                <div style="flex:auto;">
+                    <div class="bold none-margin-top">
+                        <span>Mr.</span>
+                    </div>
+                    <div class="none-margin-top">
+                        <span>asdfasdfasdf</span>
+                    </div>
+                    <div class="none-margin-top">
+                        <span>asdfasdfasdfasdf</span>
+                    </div>
+                    <div class="none-margin-top">
+                        <span>
+                            Egypt
+                            Cairo,
+                            Dokki,
+                            56321
+                        </span>
+                    </div>
+                    <div class="none-margin-top">
+                        <span>3215548&nbsp;<b>Fax</b>&nbsp;023565947</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div>
+            <div class="flex">
+                <div style="flex:auto">
+                    <div class="none-margin-top">
+                        <span class="bold h3">Salesperson:</span>
+                        <span class="h3">&nbsp;asdfasdfasdf</span>
+                    </div>
+                    <div class="none-margin-top">
+                        <span class="bold h3">Entered By:</span>
+                        <span class="h3">&nbsp;asdfasdfasdf</span>
+                    </div>
+                    <div class="none-margin-top">
+                        <span class="bold h3">Order Forcast Date:</span>
+                        <span class="h3">&nbsp;asdfasdfasdf</span>
+                    </div>
+                </div>
+                <div style="flex:auto;">
+                </div>
+            </div>
+        </div>
+    </div>
+    <br />
+    <div class="row-space-around">
+        <div class="flex">
+            <div style="flex:auto">
+                <span class="bold h3">Project:</span>
+            </div>
+            <div style="flex:auto">
+                <div>
+                    <span class="h3">&nbsp;Test</span>
+                </div>
+                <div class="none-margin-top">
+                    <span class="h3">
+                        
+                            <span>&nbsp;Cairo</span>
+                       
+                    </span>
+                </div>
+            </div>
+        </div>
+        <div>
+            <span class="bold h3">TSN Project #:&nbsp;</span>
+            <span class="h3">&nbsp;21564</span>
+        </div>
+    </div>
+    <br />
+    <table class="table table-border text-center table-striped">
+        <thead class="thead">
+            <tr>
+                <th>Item</th>
+                <th>*</th>
+                <th>Description</th>
+                <th>Part Name</th>
+                <th>Knockouts</th>
+                <th>Qty</th>
+                <th>MLF</th>
+              
+            </tr>
+        </thead>
+        <tbody class="table-bordered text-center">
+         
+        </tbody>
+    </table>
+    <br />
+  
+    <div>
+        <h4>
+            <span style="margin-right:10px;">Total Weight(lbs):</span>
+          
+        </h4>
+    </div>
+    <div>
+        <h3 class="text-center expired">
+            <u>We must have a signed commitment within 30 days of Quote Issue Date.</u>
+        </h3>
+    </div>
+    <div>
+        <div>
+            <h4 class="none-margin-bottom">Member Terms:</h4>
+            <ul class="none-margin-top">
+                <li>All structural metal is coated G60 unless otherwise noted.</li>
+                <li>Knockout Abbreviation: Standard (STD), West Coast (WST), None (NO), Special (SPE)</li>
+                <li>Standard Knockout (STD) are 12" from leading end and 24" o.c.</li>
+                <li>West Cost (WST) are 24" from leading end and 24" o.c.</li>
+                <li>Special Knockout (SPE) or No Knockout/Unpunched (NO) are available upon request.</li>
+                <li>Studs less than 6ft will be un-punched and anything less than 60" will incur a cut charge.</li>
+            </ul>
+        </div>
+        <div>
+            <h4 class="none-margin-bottom">Freight Terms:</h4>
+            <ul class="none-margin-top">
+                <li>Freight is prepaid on metal on full truck load orders of 40,000 lbs or more. Anything less may incur freight charges.</li>
+                <li>Shipping and freight subject to increased fuel surcharges and trucker availability at time of shipment.</li>
+            </ul>
+        </div>
+        <div>
+            <h4 class="none-margin-bottom">General Terms:</h4>
+            <ul class="none-margin-top">
+                <li>Numbers are BUGETARY ONLY. Quote is valid until 07-20-14.</li>
+                <li>Quoted Prices are specific to the project listed and only valid for the quantities shown for each product.</li>
+                <li>
+                    All Orders placed after 8 AM (EST) will be processed the following day (Inventory levels permitting).
+                </li>
+                <li>
+                    Full box pricing shown for connections. A repackaging fee of $15 will apply per box at time of order if less than full box quantities
+                    are requested.
+                </li>
+                <li>Other standard terms and conditions published in TSN's Catalog and Website apply to this order.</li>
+                <li>
+                    The terms and conditions of the Master Purchase Agreement between The Steel Network, Inc and the Purchaser are incorporated
+                    into this transaction by reference into this order.
+                </li>
+            </ul>
+            * Denotes special (custom) product. Signed product drawing will be required before production.
+        </div>
+        <div>
+            <h4 class="none-margin-bottom">Additional Notes:</h4>
+            None
+        </div>
+    </div>
+    <br />
+    <div class="approval">
+        <div>
+            <div class="approval-signature">
+                <div class="approval-signature-item1">
+                    <span class="bold h2">Approval:</span>
+                </div>
+                <div class="approval-signature-item2">
+                    <span class="bold line">_________________________________</span>
+                    <div class="bold item-under-line">
+                        <span>Signature</span>
+                    </div>
+                </div>
+            </div>
+            <br />
+            <br />
+            <div class="printed">
+                <div class="printed-item1">
+                    <span></span>
+                </div>
+                <div class="printed-item2">
+                    <span class="bold line">_________________________________</span>
+                    <div class="bold item-under-line">
+                        <span>Printed</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="approval-company">
+            <div class="bold line">_________________________________</div>
+            <div class="bold item-under-line">Company</div>
+            <br />
+            <br />
+            <div class="bold line">_________________________________</div>
+            <div class="bold item-under-line">Date</div>
+        </div>
+    </div>
+</div>
